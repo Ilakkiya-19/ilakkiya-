@@ -1,0 +1,54 @@
+#include <iostream>
+using namespace std; 
+    
+int main(){
+    int subjects, i;  
+    float marks, total=0.0f, averageMarks, p;
+
+     
+    cout << "Enter number of subjects\n";  
+    cin >> subjects;  
+    
+
+    for(i = 0; i < subjects; i++){
+        cout<<"enter the mark "<<i+1<<"= ";
+       cin >> marks;
+      
+       total += marks; 
+    }
+     
+
+  
+    cout << "Total Marks = " << total;  
+       averageMarks = total / subjects;
+    cout << "\nAggregate = " << averageMarks<<"\n";  
+   
+
+    p = (total/(subjects * 100)) * 100;  
+    if(p>=60 && p<75)
+    {
+        cout<<"FIRST CLASS";
+    }
+    else if(p> 75)
+    {
+        cout<<"DISTINCTION";
+    } 
+    else if(p>=50 && p<60)
+    {
+        cout<<"SECOND CLASS";
+    }
+     else if(p>=40 && p<50)
+    {
+        cout<<"THIRD CLASS";
+    }
+    else{
+           cout<<"REAPPEAR";
+    }
+
+    if(marks>=50){
+        cout<<"\nDistintion wil all pass";
+    }
+    
+    
+    return 0;  
+}
